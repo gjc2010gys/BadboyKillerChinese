@@ -1,12 +1,5 @@
 import random
 
-CheckWrong("Please enter the minimum value of the answer.")
-smallest = temp
-CheckWrong("Please enter the maximum value of the answer.")
-bigest = temp
-fun = input('Will fun gonna end?(input"y"or"n")')
-right = 0
-
 def panduan():
     global right
     global channe
@@ -48,7 +41,14 @@ def CheckWrong(InputSay):
             Wrong =  False
     return temp
 
-while 'n' == fun:
+
+CheckWrong("Please enter the minimum value of the answer.")
+smallest = temp
+CheckWrong("Please enter the maximum value of the answer.")
+bigest = temp
+right = 0
+
+while True:
     MakeAnswer()
     if mode == 1:
 
@@ -81,5 +81,3 @@ while 'n' == fun:
         guest = eval(input("="))
 
         panduan2()
-    
-    fun = input('Will fun gonna end?(input"y"or"n")')
