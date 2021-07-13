@@ -4,22 +4,22 @@ def panduan():
     global right
     global channe
     if answer == guest:
-        print("You are rigth！")
+        print("正确！")
         right = right + 1
-        print("You got the ", right, " question correctly.")
+        print("你已经答对了", right, "题！")
     else:
-        print("You are wrong！The answer is", plus2)
+        print("错误！答案为", plus2)
     return right
 
 def panduan2():
     global right
     global channe
     if plus2 == guest:
-        print("You are rigth！")
+        print("正确！")
         right = right + 1
-        print("You got the ", right, " question correctly.")
+        print("你已经答对了", right, "题！")
     else:
-        print("You are wrong！The answer is", plus2)
+        print("错误！答案为", plus2)
     return right
 
 def MakeAnswer():
@@ -36,15 +36,15 @@ def CheckWrong(InputSay):
         try:
             temp = int(input(InputSay))
         except ValueError:
-            print('Input Wrong!You only can input int number!')
+            print('输入错误，你只能输入整数！')
         else:
             Wrong =  False
     return temp
 
 
-CheckWrong("Please enter the minimum value of the answer.")
+CheckWrong("请输入答案的最小值：")
 smallest = temp
-CheckWrong("Please enter the maximum value of the answer.")
+CheckWrong("请输入答案的最大值：")
 bigest = temp
 right = 0
 

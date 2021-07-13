@@ -32,19 +32,18 @@ class Programme(object):
 
     def pd(x,y,ix,iy):
         if ix == x:
-            print('x is correct.')
+            print('x正确.')
         else:
-            print('x is not correct.x is '+str(x))
+            print('x不正确。x为'+str(x))
         if iy == y:
-            print('y is correct.')
+            print('y正确.')
         else:
-            print('y is not correct.y is '+str(y))
-
+            print('y不正确。x为'+str(y))
     def sr():
         global ix,iy
-        CheckWrong('Please input X:')
+        CheckWrong('请输入x：')
         temp = ix
-        CheckWrong('Please input Y:')
+        CheckWrong('请输入y：')
         temp = iy
         return ix,iy
 
@@ -71,23 +70,22 @@ def CheckWrong(InputSay):
         try:
             temp = int(input(InputSay))
         except ValueError:
-            print('Input Wrong!You only can input int number!')
+            print('输入错误，你只能输入整数！')
         else:
             Wrong =  False
     return temp
 
 if __name__ == '__main__':
-    OutputNoInput=input('Do you only want some questions with answer or not?')
-    if OutputNoInput == 'i':
-        while stop != 'y':   
+    OutputNoInput=input('输出模式或者答题模式？(输出为1，答题为2)')
+    if OutputNoInput == '2':
+        while True:   
             Programme.make()
             Programme.jjjs(x,y,fxbs,fybs,sxbs,sybs,fh)
             Programme.output(x,y,sxbs,sybs,fxbs,fybs,fh)
             Programme.sr()
             Programme.pd(x,y,ix,iy)
-            stop = input("Do you want to stop?(Type 'y' or 'n)")
     else:
-        CheckWrong('How many question do you want?')
+        CheckWrong('你想要多少个问题?')
         questiontime = temp
         for i in range(0,questiontime):   
             Programme.make()
