@@ -1,9 +1,11 @@
+
 import random
 
 stop = 'n'
+Wrong = True
 
 class Programme(object):
-    def sc(x,y,sxbs,sybs,fxbs,fybs,fh):
+    def output(x,y,sxbs,sybs,fxbs,fybs,fh):
         if fh == 0:
             print(str(fxbs)+'x'+'+'+str(fybs)+'y'+'='+str(fjg))
             print(str(sxbs)+'x'+'+'+str(sybs)+'y'+'='+str(sjg)+'\n')
@@ -42,8 +44,10 @@ class Programme(object):
 
     def sr():
         global ix,iy
-        ix = int(input('请输入x：'))
-        iy = int(input('请输入y：'))
+        CheckWrong('Please input X:')
+        temp = ix
+        CheckWrong('Please input Y:')
+        temp = iy
         return ix,iy
 
     def jjjs(x,y,fxbs,fybs,sxbs,sybs,fh):
@@ -62,11 +66,33 @@ class Programme(object):
             sjg = x * sxbs - y * sybs
         return fjg,sjg
 
+def CheckWrong(InputSay):
+    Wrong = True
+    global temp
+    while Wrong:
+        try:
+            temp = int(input(InputSay))
+        except ValueError:
+            print('Input Wrong!You only can input int number!')
+        else:
+            Wrong =  False
+    return temp
+
 if __name__ == '__main__':
-    while stop != 'y':   
-        Programme.make()
-        Programme.jjjs(x,y,fxbs,fybs,sxbs,sybs,fh)
-        Programme.sc(x,y,sxbs,sybs,fxbs,fybs,fh)
-        Programme.sr()
-        Programme.pd(x,y,ix,iy)
-        stop = input("Do you want to stop?(Type 'y' or 'n)")
+    OutputNoInput=input('Do you only want some questions with answer or not?')
+    if OutputNoInput == 'i':
+        while stop != 'y':   
+            Programme.make()
+            Programme.jjjs(x,y,fxbs,fybs,sxbs,sybs,fh)
+            Programme.output(x,y,sxbs,sybs,fxbs,fybs,fh)
+            Programme.sr()
+            Programme.pd(x,y,ix,iy)
+            stop = input("Do you want to stop?(Type 'y' or 'n)")
+    else:
+        CheckWrong('How many question do you want?')
+        questiontime = temp
+        for i in range(0,questiontime):   
+            Programme.make()
+            Programme.jjjs(x,y,fxbs,fybs,sxbs,sybs,fh)
+            Programme.output(x,y,sxbs,sybs,fxbs,fybs,fh)
+            print('x='+str(x)+'\n'+'y='+str(y))
