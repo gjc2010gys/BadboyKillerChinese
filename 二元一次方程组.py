@@ -42,9 +42,9 @@ class Programme(object):
     def sr():
         global ix,iy
         CheckWrong('请输入x：')
-        temp = ix
+        ix = temp
         CheckWrong('请输入y：')
-        temp = iy
+        iy = temp
         return ix,iy
 
     def jjjs(x,y,fxbs,fybs,sxbs,sybs,fh):

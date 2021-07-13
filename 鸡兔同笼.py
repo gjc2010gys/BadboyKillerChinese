@@ -24,12 +24,12 @@ def CheckAnswer(InputRabbit,InputChiken,Rabbit,Chiken):
     if InputChiken == Chiken:
         print("鸡的数量正确！")
     else:
-        print("鸡的数量正确！!实际上有"+str(chiken)+"只鸡在笼子里！.")
+        print("鸡的数量不正确！!实际上有"+str(chiken)+"只鸡在笼子里！.")
 
     if InputRabbit == rabbit:
         print("兔子的数量正确！")
     else:
-        print("兔子的数量正确！!实际上有"+str(chiken)+"只兔子在笼子里！.")
+        print("兔子的数量不正确！!实际上有"+str(chiken)+"只兔子在笼子里！.")
 
 while True:
     MakeAnswer()
