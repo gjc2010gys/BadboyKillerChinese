@@ -1,2 +1,2 @@
-# system-of-linear-equations-of-two-unknowns-Builder
-system of linear equations of two unknowns Builder.It can build some system of linear equations of two unknowns question and you can use this prgram to build some system of linear equations of two unknowns question to your child.
+# bad-boy-killer
+These program can build some question to your children.So they won't play the game or do something else anymore!
