@@ -15,27 +15,27 @@ def CheckWrong(InputSay):
         try:
             temp = int(input(InputSay))
         except ValueError:
-            print('Input Wrong!You only can input int number!')
+            print('输入错误，你只能输入整数！')
         else:
             Wrong =  False
     return temp
 
 def CheckAnswer(InputRabbit,InputChiken,Rabbit,Chiken):
     if InputChiken == Chiken:
-        print("The number of chickens is correct!")
+        print("鸡的数量正确！")
     else:
-        print("The number of chickens is not correct!There are "+str(chiken)+"in the cage.")
+        print("鸡的数量正确！!实际上有"+str(chiken)+"只鸡在笼子里！.")
 
     if InputRabbit == rabbit:
-        print("The number of rabbit is correct!")
+        print("兔子的数量正确！")
     else:
-        print("The number of rabbit is not correct!There are "+str(rabbit)+"in the cage.")
+        print("兔子的数量正确！!实际上有"+str(chiken)+"只兔子在笼子里！.")
 
 while True:
     MakeAnswer()
-    print("There are "+str(chiken+rabbit)+" animal in the cage.There are "+str(ChikenLeg+RabbitLeg)+" Legs on the floor.")
-    CheckWrong('How many rabbit are there in the cage?')
+    print("笼子里有"+str(chiken+rabbit)+"个头.有"+str(ChikenLeg+RabbitLeg)+"只腿在地上.")
+    CheckWrong('有多少兔子在笼子里?')
     InputRabbit = temp
-    CheckWrong('How many Chiken are there in the cage?')
+    CheckWrong('有多少鸡在笼子里?')
     InputChiken = temp
     CheckAnswer(InputRabbit,InputChiken,rabbit,chiken)
