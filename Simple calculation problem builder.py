@@ -1,7 +1,9 @@
 import random
 
-smallest = eval(input("请输入算术题的最小范围"))
-bigest = eval(input("请输入算术题的最大范围"))
+CheckWrong("Please enter the minimum value of the answer.")
+smallest = temp
+CheckWrong("Please enter the maximum value of the answer.")
+bigest = temp
 fun = input('Will fun gonna end?(input"y"or"n")')
 right = 0
 
@@ -33,6 +35,18 @@ def MakeAnswer():
     plus1 = random.randint(smallest, bigest)
     plus2 = random.randint(smallest, bigest)
     return mode,plus1,plus2
+
+def CheckWrong(InputSay):
+    Wrong = True
+    global temp
+    while Wrong:
+        try:
+            temp = int(input(InputSay))
+        except ValueError:
+            print('Input Wrong!You only can input int number!')
+        else:
+            Wrong =  False
+    return temp
 
 while 'n' == fun:
     MakeAnswer()
