@@ -8,7 +8,7 @@ def panduan():
         right = right + 1
         print("你已经答对了", right, "题！")
     else:
-        print("错误！答案为", plus2)
+        print("错误！答案为", answer)
     return right
 
 def panduan2():
@@ -53,31 +53,32 @@ while True:
     if mode == 1:
 
         answer = plus1 + plus2
-        print(plus1, "+", plus2, end=" ")
-        guest = eval(input("="))
-
+        Output = str(plus1)+ "+"+str(plus2)+'='
+        CheckWrong(Output)
+        guest = temp
         panduan()
 
     elif mode == 2:
 
         answer = plus1 * plus2  # 积=乘数*乘数
-        print(plus1, "*", plus2, end=" ")
-        guest = eval(input("="))
-
+        Output = str(plus1)+ "*"+str(plus2)+'='
+        CheckWrong(Output)
+        guest = temp
         panduan()
 
     elif mode == 3:
 
         beichushu = plus1 * plus2  # 被除数=商*除数
-        print(beichushu, "÷", plus1, end=" ")
-        guest = eval(input("="))
+        Output = str(beichushu)+ "÷"+str(plus1)+'='
+        CheckWrong(Output)
+        guest = temp
 
         panduan2()
 
     else:
 
         beijianshu = plus1 + plus2  # 被减数=差+减数
-        print(beijianshu, "-", plus1, end=" ")
-        guest = eval(input("="))
-
+        Output = str(beijianshu)+ "-"+str(plus1)+'='
+        CheckWrong(Output)
+        guest = temp
         panduan2()
