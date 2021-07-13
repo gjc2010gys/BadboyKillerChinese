@@ -5,32 +5,27 @@ bigest = eval(input("请输入算术题的最大范围"))
 fun = input('Will fun gonna end?(input"y"or"n")')
 right = 0
 
-
 def panduan():
     global right
     global channe
     if answer == guest:
-        print("答对了！")
+        print("You are rigth！")
         right = right + 1
-        print("答对了", right, "题！")
+        print("You got the ", right, " question correctly.")
     else:
-        print("答错了！答案是", answer)
-        channe = channe - 1
-        print("剩下次数为", channe)
-    return channe
+        print("You are wrong！The answer is", plus2)
+    return right
 
 def panduan2():
     global right
     global channe
     if plus2 == guest:
-        print("答对了！")
+        print("You are rigth！")
         right = right + 1
-        print("答对了", right, "题！")
+        print("You got the ", right, " question correctly.")
     else:
-        print("答错了！答案是", plus2)
-        channe = channe - 1
-        print("剩下次数为", channe)
-    return channe
+        print("You are wrong！The answer is", plus2)
+    return right
 
 def MakeAnswer():
     global mode,plus1,plus2
