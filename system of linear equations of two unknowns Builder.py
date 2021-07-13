@@ -31,16 +31,14 @@ class Programme(object):
         return x,y,fxbs,fybs,fh,sybs,sxbs
 
     def pd(x,y,ix,iy):
-        if x == ix and y == iy:
-            print('X和Y都正确！')
-        elif x == ix:
-            print('X正确！')
-        elif x != ix:
-            print('X不正确!,X的值为'+str(x))
-        elif y == iy:
-            print('Y正确！')
-        elif y != iy:
-            print('Y不正确!,Y的值为'+str(y))
+        if ix == x:
+            print('x is correct.')
+        else:
+            print('x is not correct.x is '+str(x))
+        if iy == y:
+            print('y is correct.')
+        else:
+            print('y is not correct.y is '+str(y))
 
     def sr():
         global ix,iy
